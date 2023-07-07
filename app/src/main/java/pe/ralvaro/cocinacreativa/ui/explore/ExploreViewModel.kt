@@ -1,10 +1,10 @@
-package pe.ralvaro.cocinacreativa.ui.dashboard
+package pe.ralvaro.cocinacreativa.ui.explore
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class DashboardViewModel : ViewModel() {
+class ExploreViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = "This is dashboard Fragment"
