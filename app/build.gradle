@@ -19,9 +19,18 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    testOptions  {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+
     buildTypes {
-        release {
+        debug {
             minifyEnabled false
+        }
+        release {
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -71,10 +80,13 @@ dependencies {
     implementation "com.jakewharton.timber:timber:$timber_version"
     implementation 'com.facebook.shimmer:shimmer:0.5.0'
 
+    // Test dependencies
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.2"
+    testImplementation 'org.mockito:mockito-core:5.4.0'
+    testImplementation "androidx.arch.core:core-testing:2.2.0"
 }
 
 kapt {

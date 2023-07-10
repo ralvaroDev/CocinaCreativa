@@ -1,0 +1,357 @@
+{
+    "food_dishes":
+    [
+        {
+            "id": "1a",
+            "food_name": "Ceviche",
+            "image_url": "www",
+            "coordinates": "-12.086585,-77.046739",
+            "description": "Este plato es a base de pescado, originario de las zonas de la costa peruana...",
+            "filter_tags":
+            [
+                "ingredient_fish",
+                "type_dish_fondo",
+                "ingredient_lemon",
+                "ingredient_salt"
+            ]
+        },
+        {
+            "id": "2b",
+            "food_name": "Lomo Saltado",
+            "image_url": "www",
+            "coordinates": "-12.092336,-77.031019",
+            "description": "Este plato combina la carne de res con cebolla, tomate y papas fritas...",
+            "filter_tags":
+            [
+                "ingredient_beef",
+                "type_dish_fondo",
+                "ingredient_onion",
+                "ingredient_vinegar"
+            ]
+        },
+        {
+            "id": "3c",
+            "food_name": "Aji de Gallina",
+            "image_url": "www",
+            "coordinates": "-12.074730,-77.029778",
+            "description": "Este plato es a base de pollo deshilachado, ají amarillo y nueces...",
+            "filter_tags":
+            [
+                "ingredient_chicken",
+                "type_dish_fondo",
+                "ingredient_pepper",
+                "ingredient_nuts",
+                "ingredient_milk"
+            ]
+        },
+        {
+            "id": "4d",
+            "food_name": "Anticuchos",
+            "image_url": "www",
+            "coordinates": "-12.090537,-77.031822",
+            "description": "Estas brochetas de corazón de res son una delicia típica de Perú...",
+            "filter_tags":
+            [
+                "ingredient_beef",
+                "type_dish_entrada",
+                "ingredient_pepper"
+            ]
+        },
+        {
+            "id": "5e",
+            "food_name": "Causa Limeña",
+            "image_url": "www",
+            "coordinates": "-12.091878,-77.029109",
+            "description": "Este platillo consiste en una especie de pastel de papa amarilla relleno...",
+            "filter_tags":
+            [
+                "ingredient_potato",
+                "type_dish_entrada",
+                "ingredient_lime"
+            ]
+        },
+        {
+            "id": "6f",
+            "food_name": "Rocoto Relleno",
+            "image_url": "www",
+            "coordinates": "-12.064781,-77.043688",
+            "description": "El rocoto relleno es un plato picante que se prepara con rocoto, carne...",
+            "filter_tags":
+            [
+                "ingredient_hot_pepper",
+                "type_dish_fondo",
+                "ingredient_beef"
+            ]
+        },
+        {
+            "id": "7g",
+            "food_name": "Papa a la Huancaina",
+            "image_url": "www",
+            "coordinates": "-12.048590,-77.047022",
+            "description": "Este plato consiste en papas cocidas cubiertas con una salsa a base de ají...",
+            "filter_tags":
+            [
+                "ingredient_potato",
+                "type_dish_entrada",
+                "ingredient_pepper"
+            ]
+        },
+        {
+            "id": "8h",
+            "food_name": "Ceviche de Pulpo",
+            "image_url": "www",
+            "coordinates": "-12.068429,-77.038105",
+            "description": "Este ceviche se prepara con pulpo marinado en limón y ají amarillo...",
+            "filter_tags":
+            [
+                "ingredient_fish",
+                "type_dish_entrada",
+                "ingredient_lemon"
+            ]
+        },
+        {
+            "id": "9i",
+            "food_name": "Arroz con Mariscos",
+            "image_url": "www",
+            "coordinates": "-12.099746,-77.018955",
+            "description": "Este platillo se prepara con arroz y una variedad de mariscos como camarones...",
+            "filter_tags":
+            [
+                "ingredient_rice",
+                "type_dish_fondo",
+                "ingredient_fish",
+                "ingredient_cheese"
+            ]
+        },
+        {
+            "id": "10j",
+            "food_name": "Tacu Tacu",
+            "image_url": "www",
+            "coordinates": "-12.081202,-77.035102",
+            "description": "El tacu tacu es un plato a base de arroz y frijoles refritos, servido con carne...",
+            "filter_tags":
+            [
+                "ingredient_rice",
+                "type_dish_fondo",
+                "ingredient_beans"
+            ]
+        },
+        {
+            "id": "11k",
+            "food_name": "Parihuela",
+            "image_url": "www",
+            "coordinates": "-12.057112,-77.037442",
+            "description": "La parihuela es una sopa de mariscos con un caldo rico y abundante...",
+            "filter_tags":
+            [
+                "ingredient_fish",
+                "type_dish_sopa",
+                "ingredient_spice"
+            ]
+        },
+        {
+            "id": "12l",
+            "food_name": "Pollo a la Brasa",
+            "image_url": "www",
+            "coordinates": "-12.055726,-77.060819",
+            "description": "El pollo a la brasa es uno de los platos más populares de la gastronomía peruana...",
+            "filter_tags":
+            [
+                "ingredient_chicken",
+                "type_dish_fondo",
+                "ingredient_spice"
+            ]
+        },
+        {
+            "id": "13m",
+            "food_name": "Papa Rellena",
+            "image_url": "www",
+            "coordinates": "-12.051015,-77.038526",
+            "description": "La papa rellena es una deliciosa preparación que consiste en papas...",
+            "filter_tags":
+            [
+                "ingredient_potato",
+                "type_dish_entrada",
+                "ingredient_beef"
+            ]
+        },
+        {
+            "id": "14n",
+            "food_name": "Tamal Criollo",
+            "image_url": "www",
+            "coordinates": "-12.058927,-77.032749",
+            "description": "El tamal criollo es una preparación a base de masa de maíz rellena...",
+            "filter_tags":
+            [
+                "ingredient_corn",
+                "type_dish_entrada",
+                "ingredient_meat",
+                "ingredient_herb"
+            ]
+        }
+    ],
+    "filters":
+    [
+        {
+            "id": 1,
+            "name": "Pescado",
+            "category": "ingredient",
+            "tag": "ingredient_fish",
+            "color": "#4768FD"
+        },
+        {
+            "id": 2,
+            "name": "Limon",
+            "category": "ingredient",
+            "tag": "ingredient_lemon",
+            "color": "#A8D83D"
+        },
+        {
+            "id": 3,
+            "name": "Sal",
+            "category": "ingredient",
+            "tag": "ingredient_salt",
+            "color": "#F2891D"
+        },
+        {
+            "id": 4,
+            "name": "Rocoto",
+            "category": "ingredient",
+            "tag": "ingredient_hot_pepper",
+            "color": "#E13939"
+        },
+        {
+            "id": 5,
+            "name": "Cebolla",
+            "category": "ingredient",
+            "tag": "ingredient_onion",
+            "color": "#FD7C47"
+        },
+        {
+            "id": 6,
+            "name": "Cilantro",
+            "category": "ingredient",
+            "tag": "ingredient_herb",
+            "color": "#48A7F2"
+        },
+        {
+            "id": 8,
+            "name": "Pimienta",
+            "category": "ingredient",
+            "tag": "ingredient_spice",
+            "color": "#6B9E39"
+        },
+        {
+            "id": 9,
+            "name": "Ají",
+            "category": "ingredient",
+            "tag": "ingredient_pepper",
+            "color": "#E13939"
+        },
+        {
+            "id": 10,
+            "name": "Pollo",
+            "category": "ingredient",
+            "tag": "ingredient_chicken",
+            "color": "#F2E539"
+        },
+        {
+            "id": 11,
+            "name": "Nueces",
+            "category": "ingredient",
+            "tag": "ingredient_nuts",
+            "color": "#DE8A0B"
+        },
+        {
+            "id": 12,
+            "name": "Leche evaporada",
+            "category": "ingredient",
+            "tag": "ingredient_milk",
+            "color": "#F2C339"
+        },
+        {
+            "id": 13,
+            "name": "Queso parmesano",
+            "category": "ingredient",
+            "tag": "ingredient_cheese",
+            "color": "#F2CB39"
+        },
+        {
+            "id": 14,
+            "name": "Corazón de res",
+            "category": "ingredient",
+            "tag": "ingredient_beef",
+            "color": "#BC39F2"
+        },
+        {
+            "id": 15,
+            "name": "Frijoles",
+            "category": "ingredient",
+            "tag": "ingredient_beans",
+            "color": "#E13939"
+        },
+        {
+            "id": 16,
+            "name": "Vinagre",
+            "category": "ingredient",
+            "tag": "ingredient_vinegar",
+            "color": "#F2B239"
+        },
+        {
+            "id": 18,
+            "name": "Papas cocidas",
+            "category": "ingredient",
+            "tag": "ingredient_potato",
+            "color": "#F2D039"
+        },
+        {
+            "id": 19,
+            "name": "Choclo",
+            "category": "ingredient",
+            "tag": "ingredient_corn",
+            "color": "#F2E539"
+        },
+        {
+            "id": 20,
+            "name": "Arroz",
+            "category": "ingredient",
+            "tag": "ingredient_rice",
+            "color": "#F2E539"
+        },
+        {
+            "id": 21,
+            "name": "Fondo",
+            "category": "type",
+            "tag": "type_dish_fondo",
+            "color": "#4768FD"
+        },
+        {
+            "id": 22,
+            "name": "Entrada",
+            "category": "type",
+            "tag": "type_dish_entrada",
+            "color": "#F2891D"
+        },
+        {
+            "id": 23,
+            "name": "Sopa",
+            "category": "type",
+            "tag": "type_dish_sopa",
+            "color": "#DE8A0B"
+        },
+        {
+            "id": 24,
+            "name": "Ensalada",
+            "category": "type",
+            "tag": "type_dish_ensalada",
+            "color": "#FD7C47"
+        },
+        {
+            "id": 25,
+            "name": "Postre",
+            "category": "type",
+            "tag": "type_dish_postre",
+            "color": "#A8D83D"
+        }
+    ]
+}

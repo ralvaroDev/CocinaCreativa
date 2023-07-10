@@ -21,5 +21,5 @@ plugins {
 }
 
 ext {
-    baseUrlRecipe = '"https://"'
+    baseUrlRecipe = '"http://demo7060424.mockable.io/"'
 }
