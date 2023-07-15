@@ -9,7 +9,14 @@
         android:id="@+id/navigation_home"
         android:name="pe.ralvaro.cocinacreativa.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/to_search"
+            app:destination="@id/navigation_search" />
+        <action
+            android:id="@+id/to_food_detail_from_home"
+            app:destination="@id/navigation_food_detail" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_explore"
@@ -22,4 +29,40 @@
         android:name="pe.ralvaro.cocinacreativa.ui.favourites.FavouritesFragment"
         android:label="@string/title_favourites"
         tools:layout="@layout/fragment_favourites" />
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="pe.ralvaro.cocinacreativa.ui.search.SearchFragment"
+        android:label="@string/title_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/to_foodDetail"
+            app:destination="@id/navigation_food_detail" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_food_detail"
+        android:name="pe.ralvaro.cocinacreativa.ui.food_detail.FoodDetailFragment"
+        android:label="@string/title_food_detail"
+        tools:layout="@layout/fragment_food_detail" >
+        <argument
+            android:name="food_id"
+            app:argType="string" />
+        <action
+            android:id="@+id/to_maps"
+            app:destination="@id/mapsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="pe.ralvaro.cocinacreativa.ui.maps.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" >
+        <argument
+            android:name="lat_value"
+            app:argType="string" />
+        <argument
+            android:name="lon_value"
+            app:argType="string" />
+        <argument
+            android:name="place_name"
+            app:argType="string" />
+    </fragment>
 </navigation>

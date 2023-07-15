@@ -7,4 +7,16 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00FFFFFF</color>
+
+    <color name="pastel_green">#B0E4AA</color>
+    <color name="on_pastel_green">#51E840</color>
+
+
+    <color name="default_filter_icon_color">#FF999999</color>
+    <color name="gray_secondary">#747474</color>
+    <color name="navy">#073042</color>
+
+    <color name="green_spash">#60A67C</color>
+
 </resources>

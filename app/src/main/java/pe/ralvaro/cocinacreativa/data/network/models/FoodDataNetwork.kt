@@ -1,23 +1,27 @@
 package pe.ralvaro.cocinacreativa.data.network.models
 
+import androidx.annotation.VisibleForTesting
 import com.google.gson.annotations.SerializedName
-import org.jetbrains.annotations.TestOnly
 import pe.ralvaro.cocinacreativa.data.database.FoodKFtsEntity
-import pe.ralvaro.cocinacreativa.data.domain.Filters
-import pe.ralvaro.cocinacreativa.data.domain.FoodData
-import pe.ralvaro.cocinacreativa.data.domain.FoodDishes
+import pe.ralvaro.cocinacreativa.data.model.Filter
+import pe.ralvaro.cocinacreativa.data.model.FoodData
+import pe.ralvaro.cocinacreativa.data.model.FoodDish
 
 data class FoodDataNetwork(
-    @SerializedName("food_dishes") val foodDishes: List<FoodDishesNetwork>,
+    @SerializedName("food_dishes") val foodDishes: List<FoodDishNetwork>,
     val filters: List<FiltersNetwork>
 )
 
-data class FoodDishesNetwork(
+data class FoodDishNetwork(
     val id: String,
     @SerializedName("food_name") val foodName: String,
     @SerializedName("image_url") val imageUrl: String,
     val coordinates: String,
     val description: String,
+    val steps: String,
+    val time: String,
+    val place: String,
+    val rate: String,
     @SerializedName("filter_tags") val filterTags: List<String>
 )
 
@@ -29,7 +33,7 @@ data class FiltersNetwork(
     val color: String
 )
 
-fun FoodDataNetwork.toDatabaseModel() : List<FoodKFtsEntity> {
+fun FoodDataNetwork.toDatabaseModel(): List<FoodKFtsEntity> {
     return foodDishes.map {
         FoodKFtsEntity(
             foodId = it.id,
@@ -40,25 +44,52 @@ fun FoodDataNetwork.toDatabaseModel() : List<FoodKFtsEntity> {
 }
 
 fun FoodDataNetwork.toDomainModel(): FoodData {
-    val foodDishes = foodDishes.map { it.toFoodDishes() }
+    val foodDishes = foodDishes.map { it.toFoodDishes(filters) }
     val filters = filters.map { it.toFilters() }
     return FoodData(foodDishes, filters)
 }
 
-private fun FoodDishesNetwork.toFoodDishes(): FoodDishes {
-    return FoodDishes(id, foodName, imageUrl, coordinates, description, filterTags)
+private fun FoodDishNetwork.toFoodDishes(filters: List<FiltersNetwork>): FoodDish {
+    return FoodDish(
+        id = id,
+        foodName = foodName,
+        imageUrl = imageUrl,
+        coordinates = coordinates,
+        description = description,
+        steps = steps,
+        time = time,
+        placeName = place,
+        rate = rate,
+        filterTags = filterTags.map { tag ->
+            //Timber.d("El tag que no esta es -> $tag")
+            filters.find { it.tag == tag }!!.toFilters()
+        }
+    )
 }
 
-@TestOnly
-fun FoodDishesNetwork.toFoodDishesTest(): FoodDishes {
-    return FoodDishes(id, foodName, imageUrl, coordinates, description, filterTags)
+@VisibleForTesting
+fun FoodDishNetwork.toFoodDishesTest(filters: List<FiltersNetwork>): FoodDish {
+    return FoodDish(
+        id,
+        foodName,
+        imageUrl,
+        coordinates,
+        description,
+        steps,
+        time,
+        place,
+        rate,
+        filterTags.map { tag ->
+            filters.find { it.tag == tag }!!.toFilters()
+        }
+    )
 }
 
-private fun FiltersNetwork.toFilters(): Filters {
-    return Filters(id, name, category, tag, color)
+private fun FiltersNetwork.toFilters(): Filter {
+    return Filter(id, name, category, tag, color)
 }
 
-@TestOnly
-fun FiltersNetwork.toFiltersTest(): Filters {
-    return Filters(id, name, category, tag, color)
+@VisibleForTesting
+fun FiltersNetwork.toFiltersTest(): Filter {
+    return Filter(id, name, category, tag, color)
 }

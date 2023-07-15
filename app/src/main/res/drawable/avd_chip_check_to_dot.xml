@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:drawable="@drawable/chip_check">
+
+    <target android:name="icon_path">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:duration="300"
+                android:propertyName="pathData"
+                android:valueFrom="M9,16.2l-4.2,-4.2c0,0 -1.4,1.4 -1.4,1.4c0,0 5.6,5.6 5.6,5.6c0,0 12,-12 12,-12c0,0 -1.4,-1.4 -1.4,-1.4l-10.6,10.6z"
+                android:valueTo="M12,8l0,0c-2.21,0 -4,1.79 -4,4c0,2.21 1.79,4 4,4c2.21,0 4,-1.79 4,-4c0,-2.21 -1.79,-4 -4,-4l0,0z"
+                android:valueType="pathType" />
+        </aapt:attr>
+    </target>
+
+</animated-vector>

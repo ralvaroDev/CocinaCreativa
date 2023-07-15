@@ -3,4 +3,36 @@
     <string name="title_home">Home</string>
     <string name="title_explore">Explore</string>
     <string name="title_favourites">Favourites</string>
+    <string name="title_search">Search</string>
+    <string name="title_food_detail">Details</string>
+    <string name="search_food">Search food</string>
+    <string name="filters">Filters</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="reset">Reset</string>
+    <string name="hide_filter_section">Hide filter section</string>
+    <string name="ingredients_section_title">Ingredientes</string>
+    <string name="food_type_section_title">Tipo de comida</string>
+
+    <string name="template_results_count">Resultados: %d</string>
+    <string name="ingredients">Ingredientes:</string>
+
+    <string name="last_recipes_section_title">Recientemente agregadas</string>
+    <string name="fastest_recipes_section_title">¿Apurado?</string>
+    <string name="recommendations_section_title">¿Sin ideas?</string>
+
+
+    <string name="food_description_sample" translatable="false">El lomo saltado es un plato típico de la gastronomía del Perú consistente en carne de res, arroz cocido y papas fritas. Es uno de los platos más consumidos popularmente en el Perú.</string>
+    <string name="pasos">Instrucciones:</string>
+
+    <string-array name="ingredient_names_sample">
+        <item>Carnita</item>
+        <item>Papas fritas</item>
+        <item>Cebolla</item>
+        <item>Tomate</item>
+        <item>Arroz</item>
+        <item>Perejil</item>
+        <item>Aji especial</item>
+    </string-array>
+
 </resources>

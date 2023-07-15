@@ -7,6 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
 
+interface SpecificFunc<V : ViewBinding> {
+    fun onBackHandler()
+}
+
 /**
  * Define typealias to create a cleaner reference to the required lambda
  */
@@ -18,7 +22,7 @@ typealias Inflate<T> = (LayoutInflater, ViewGroup?, Boolean) -> T
  */
 abstract class BaseFragment<V : ViewBinding>(
     private val inflate: Inflate<V>
-) : Fragment(){
+) : Fragment(), SpecificFunc<V>{
 
     private var _binding: V? = null
     val binding get() = _binding!!
@@ -29,6 +33,7 @@ abstract class BaseFragment<V : ViewBinding>(
         savedInstanceState: Bundle?
     ): View? {
         _binding = inflate(inflater, container, false)
+        onBackHandler()
         return binding.root
     }
 
@@ -39,6 +44,9 @@ abstract class BaseFragment<V : ViewBinding>(
 
     // Method to avoid the super .onViewCreated call and make the easy override of it
     abstract fun onViewCreated()
+
+    // Override here so that it is not mandatory
+    override fun onBackHandler() {}
 
     override fun onDestroyView() {
         super.onDestroyView()

@@ -14,7 +14,6 @@ import androidx.room.TypeConverters
     version = 1,
     exportSchema = false
 )
-@TypeConverters(Converters::class)
 abstract class FoodDatabase : RoomDatabase() {
 
     abstract fun foodKFtsDao(): FoodKFtsDao

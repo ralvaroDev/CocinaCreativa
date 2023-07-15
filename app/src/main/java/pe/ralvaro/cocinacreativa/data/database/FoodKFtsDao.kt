@@ -16,6 +16,6 @@ interface FoodKFtsDao {
     fun insertAll(foodKFtsEntity: List<FoodKFtsEntity>)
 
     @Query("SELECT food_id from food_key_filters WHERE food_key_filters MATCH :query")
-    fun getAllFoodDishes(query: String): Flow<List<String>>
+    suspend fun getAllFoodDishes(query: String): List<String>
 
 }

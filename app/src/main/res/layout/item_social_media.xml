@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/end_guideline"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start_guideline"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="#CocinaCretiva"
+        android:textAppearance="?attr/textAppearanceHeadline4"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toTopOf="@+id/message"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="start"
+        android:text="Las mejores recetas del momento"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/btn_tiktok"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/navy"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_tiktok"
+        app:contentPadding="10dp"
+        app:tint="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/btn_facebook"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@+id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/message"
+        app:shapeAppearanceOverlay="@style/roundedImageViewRounded" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/btn_facebook"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/navy"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_facebook"
+        app:tint="@color/white"
+        app:contentPadding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_insta"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_tiktok"
+        app:layout_constraintTop_toTopOf="@+id/btn_tiktok"
+        app:shapeAppearanceOverlay="@style/roundedImageViewRounded" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/btn_insta"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/navy"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_instagram"
+        app:contentPadding="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_facebook"
+        app:layout_constraintEnd_toStartOf="@+id/btn_youtube"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_facebook"
+        app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+        app:tint="@color/white" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/btn_youtube"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="24dp"
+        android:background="@color/navy"
+        app:tint="@color/white"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_yt"
+        app:contentPadding="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_insta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_insta"
+        app:layout_constraintTop_toTopOf="@+id/btn_insta"
+        app:shapeAppearanceOverlay="@style/roundedImageViewRounded" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

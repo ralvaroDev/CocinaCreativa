@@ -2,7 +2,7 @@ package pe.ralvaro.cocinacreativa.data
 
 import pe.ralvaro.cocinacreativa.data.database.FoodDatabase
 import pe.ralvaro.cocinacreativa.data.database.FoodKFtsEntity
-import pe.ralvaro.cocinacreativa.data.domain.FoodData
+import pe.ralvaro.cocinacreativa.data.model.FoodData
 import pe.ralvaro.cocinacreativa.data.network.models.FoodDataNetwork
 import pe.ralvaro.cocinacreativa.data.network.models.toDatabaseModel
 import pe.ralvaro.cocinacreativa.data.network.models.toDomainModel
@@ -16,7 +16,7 @@ import javax.inject.Singleton
  * This ensure one type of source data, remote or local.
  */
 @Singleton
-class FoodDataRepository @Inject constructor(
+open class FoodDataRepository @Inject constructor(
     @Named("remoteDataSource") private val remoteFoodDataSource: FoodDataSource,
     @Named("localDataSource") private val localFoodDataSource: FoodDataSource,
     private val foodDatabase: FoodDatabase
@@ -37,7 +37,7 @@ class FoodDataRepository @Inject constructor(
             // Try to get data from server
             remoteFoodDataSource.remoteData()
         } catch (e: Exception) {
-            Timber.d("Connection failed, no data from remote")
+            Timber.e(e,"Connection failed, no data from remote")
             null
         }
 
